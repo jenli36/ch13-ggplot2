@@ -1,0 +1,16 @@
+---
+title: "graph"
+output: html_document
+---
+
+```{r source}
+source("exercise.R")
+```
+
+```{r graph}
+d1
+d2
+d3
+d4
+d5
+```

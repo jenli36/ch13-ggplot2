@@ -38,7 +38,7 @@ ggplot(data = diamonds) +  geom_point(mapping = aes(x = carat, y = price, color 
 # Draw another scatter plot for `diamonds_sample` of price (y) by carat (x),
 # but with all of the dots colored "blue".
 # Hint: you'll need to set the color channel, not map a value to it!
-ggplot(data = diamonds_sample) +
+d1 <- ggplot(data = diamonds_sample) +
   geom_point(mapping = aes(x = carat, y = price), color = "blue", size = 0.1)
 
 # Draw a scatter plot for `diamonds_sample` of `price` by `carat`, where each
@@ -51,21 +51,21 @@ ggplot(data = diamonds_sample) +
   geom_point(mapping = aes(x = carat, y = price, size = price))
 
 # Try coloring the above plot based on the diamond's price!
-ggplot(data = diamonds_sample) +
+d2 <- ggplot(data = diamonds_sample) +
   geom_point(mapping = aes(x = carat, y = price, size = price, color = price))
 
 # Draw a line plot (with line geometry) for `diamonds_sample`. The x-position 
 # should be mapped to carat, y-position to price, and color to cut.
-ggplot(data = diamonds_sample) +
+d3 <- ggplot(data = diamonds_sample) +
   geom_line(mapping = aes(x = carat, y = price, color = cut))
 
 # That's kind of messy. Try using `smooth` geometry instead.
-ggplot(data = diamonds_sample) +
+d4 <- ggplot(data = diamonds_sample) +
   geom_smooth(mapping = aes(x = carat, y = price, color = cut))
 
 # Draw a plot with bar geometry (a bar chart), mapping the diamond's `cut` to 
 # the x-axis
-ggplot(data = diamonds_sample) +
+d5 <- ggplot(data = diamonds_sample) +
   geom_bar(mapping = aes(x = cut))
 
 # Add an aesthetic property that will _fill_ each bar geometry based on the 
